@@ -6,6 +6,7 @@ import ProductList from './productSearch/productList';
 import TodoList from './todo/todoList';
 import Jukebox from './jukeBox/jukeBox';
 import OverallFeedback from './feedback/overallFeedback';
+import MiniTwitter from './miniTwitter/MiniTwitter';
 
 
 // const WeatherForecast = () => {
@@ -23,7 +24,8 @@ const App = () => {
         {/* <ProductList /> */}
         {/* <TodoList /> */}
         {/* <Jukebox /> */}
-        <OverallFeedback />
+        {/* <OverallFeedback /> */}
+        <MiniTwitter />
       </header>
     </div>
   );
