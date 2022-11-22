@@ -3,13 +3,16 @@ import './App.css';
 import { forecastData } from './weatherForecast/data';
 import Scoreboard from './cricketScoreboard/Scoreboard';
 import ProductList from './productSearch/productList';
+import TodoList from './todo/todoList';
+import Jukebox from './jukeBox/jukeBox';
+import OverallFeedback from './feedback/overallFeedback';
 
 
-const WeatherForecast = () => {
-  return (
-    forecastData.map((item) => <DayForecast day={item.day} conditions={item.conditions} maxTemp={item.maxTemp} wind={item.wind} hourlyTemp={item.hourlyTemp} />)
-  );
-};
+// const WeatherForecast = () => {
+//   return (
+//     forecastData.map((item) => <DayForecast day={item.day} conditions={item.conditions} maxTemp={item.maxTemp} wind={item.wind} hourlyTemp={item.hourlyTemp} />)
+//   );
+// };
 
 const App = () => {
   return (
@@ -17,7 +20,10 @@ const App = () => {
       <header className="App-header">
         {/* <WeatherForecast /> */}
         {/* <Scoreboard /> */}
-        <ProductList />
+        {/* <ProductList /> */}
+        {/* <TodoList /> */}
+        {/* <Jukebox /> */}
+        <OverallFeedback />
       </header>
     </div>
   );
