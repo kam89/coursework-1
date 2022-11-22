@@ -47,7 +47,7 @@ export default class ProductList extends Component {
     if (!e.target.checked) {
       newFilterCriteria = this.state.filterCriteria.slice();
       const deleteIndex = newFilterCriteria.findIndex((item) => item === selectedItem);
-      const result = newFilterCriteria.splice(deleteIndex, 1);
+      newFilterCriteria.splice(deleteIndex, 1);
     }
     this.setState({ filterCriteria: newFilterCriteria });
 
@@ -57,6 +57,7 @@ export default class ProductList extends Component {
       const temp = products.filter(item => item.category === filter);
       newList = [...newList, ...temp];
     });
+    if (newList.length === 0) return this.setState({ productList: products });
     return this.setState({ productList: newList });
   };
 
