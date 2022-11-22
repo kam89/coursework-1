@@ -1,0 +1,8 @@
+.emoji-buttons>button {
+  font-size: 16pt;
+  background-color: white;
+}
+
+.emoji-buttons>.selected {
+  background-color: blue;
+}
