@@ -1,0 +1,25 @@
+.complete {
+  text-decoration: line-through;
+  display: inline;
+}
+
+.normal {
+  display: inline;
+}
+
+.urgentContainer {
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 2px;
+  margin: 10px;
+  display: inline;
+}
+
+.todoContainer {
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  display: list-item;
+  padding: 6px;
+}
