@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 export const DateFact = ({ month, day }) => {
   useEffect(() => {
     getDateFact(month, day);
-  }, []);
+  }, [day, month]);
 
   const [data, setData] = useState();
 
@@ -18,7 +18,7 @@ export const DateFact = ({ month, day }) => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'inherit', maxWidth: 400 }}>
       <p>{data?.text}</p>
     </div>
   );
