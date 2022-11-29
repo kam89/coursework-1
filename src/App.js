@@ -7,6 +7,8 @@ import TodoList from './todo/todoList';
 import Jukebox from './jukeBox/jukeBox';
 import OverallFeedback from './feedback/overallFeedback';
 import MiniTwitter from './miniTwitter/MiniTwitter';
+import { DateFactMain } from './dateFact';
+import { StopWatch } from './stopWatch';
 
 
 // const WeatherForecast = () => {
@@ -25,7 +27,9 @@ const App = () => {
         {/* <TodoList /> */}
         {/* <Jukebox /> */}
         {/* <OverallFeedback /> */}
-        <MiniTwitter />
+        {/* <MiniTwitter /> */}
+        {/* <DateFactMain /> */}
+        <StopWatch />
       </header>
     </div>
   );
