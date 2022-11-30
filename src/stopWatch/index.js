@@ -8,14 +8,14 @@ export const StopWatch = () => {
   useEffect(() => {
     console.log(status);
     if (status) {
-      console.log(1);
+      console.log("before setInterval");
       const timer = setInterval(tick, 1000);
-      console.log(2);
+      console.log("after setInterval");
       const cleanup = () => {
-        console.log(3);
+        console.log("cleanup");
         return clearInterval(timer);
       };
-      console.log(4);
+      console.log("return cleanup");
       return cleanup;
     }
     return () => cleanup();
