@@ -1,24 +1,32 @@
+import { cleanup } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 
 export const StopWatch = () => {
-  const [status, setStatus] = useState('stop');
+  const [status, setStatus] = useState(false);
   const [time, setTime] = useState(0);
 
   useEffect(() => {
-    let timer;
-
-    if (status === 'stop') return clearInterval(timer);
-    timer = setInterval(tick, 1000);
-
-    return () => clearInterval(timer);
+    console.log(status);
+    if (status) {
+      console.log(1);
+      const timer = setInterval(tick, 1000);
+      console.log(2);
+      const cleanup = () => {
+        console.log(3);
+        return clearInterval(timer);
+      };
+      console.log(4);
+      return cleanup;
+    }
+    return () => cleanup();
   }, [status]);
 
   const handleStart = () => {
-    setStatus('start');
+    setStatus(true);
   };
 
   const handleStop = () => {
-    setStatus('stop');
+    setStatus(false);
   };
 
   const handleReset = () => {
